@@ -1,5 +1,4 @@
-[13:47, 22.10.2026] +47 973 33 930: <?php
-/* Registrer klasse */
+<?php/* Registrer klasse */
 /*
 /* Programmet lager et HTML-skjema for å registrere en klasse
 /* Programmet registrerer klassekode, klassenavn og studiumkode i databasen
