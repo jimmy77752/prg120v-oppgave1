@@ -1,6 +1,5 @@
-/*  funksjoner.js  */
+/* funksjoner.js */
 
-function bekreft()
-{
-      return confirm ("Er du sikker ?");
+function bekreft() {
+    return confirm("Er du sikker på at du vil slette? Dette kan ikke angres.");
 }
