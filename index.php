@@ -1,14 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="no">
-
 <head>
     <meta charset="UTF-8">
     <title>Student- og klasseregister</title>
 </head>
-
 <body>
-    <h1>TEST - NETTSIDEN FUNGERER</h1>
 
     <h1>Student- og klasseregister</h1>
     <p>Velkommen til mitt student- og klasseregister.</p>
@@ -28,5 +24,4 @@
     </ul>
 
 </body>
-
 </html>
