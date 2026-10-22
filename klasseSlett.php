@@ -1,24 +1,4 @@
-<?php/* Registrer klasse */
-/*
-/* Programmet lager et HTML-skjema for å registrere en klasse
-/* Programmet registrerer klassekode, klassenavn og studiumkode i databasen
-*/
-?>
-
-<h3>Registrer klasse</h3>
-
-<form method="post" action="" id="registrerKlasseSkjema" name="registrerKlasseSkjema">
-
-  Klassekode <input type="text" id="klassekode" name="klassekode" maxlength="5" required /> <br/>
-
-  Klassenavn <input type="text" id="klassenavn" name="klassenavn" maxlength="50" required /> <br/>
-
-  Studiumkode <input type="text" id="studiumkode" name="studiumkode" maxlength="50" required /> <br/>
-
-  <input type="submit" value="Registrer klasse" id="registrerKlasseKnapp" name="registrerKlasseKnapp" />
-
-  <input type="reset" value="Nullstill" id="nullstill" name="nullsti…
-[13:48, 22.10.2026] +47 973 33 930: <?php  /* slett-klasse */
+<?php  /* slett-klasse */
 /*
 /* Programmet lager et skjema for å velge en klasse som skal slettes
 /* Programmet sletter den valgte klassen
