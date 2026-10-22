@@ -40,25 +40,49 @@ if (isset($_POST["slettStudentKnapp"])) {
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Slett student</title>
+    <script src="funksjoner.js"></script>
+</head>
+
+<body>
+
 <h3>Slett student</h3>
 
-<form method="post" action=""
-      onsubmit="return confirm('Er du sikker på at du vil slette studenten?')">
+<form method="post" action="" onsubmit="return bekreft()">
 
     Brukernavn
 
-    <select name="brukernavn" required>
+    <select id="brukernavn" name="brukernavn" required>
         <option value="">Velg student</option>
 
         <?php
-        $sqlSetning = "SELECT * FROM student";
+        $sqlSetning = "SELECT * FROM student ORDER BY brukernavn";
         $sqlResultat = mysqli_query($db, $sqlSetning);
 
         while ($rad = mysqli_fetch_assoc($sqlResultat)) {
 
-            $brukernavn = htmlspecialchars($rad["brukernavn"], ENT_QUOTES, "UTF-8");
-            $fornavn = htmlspecialchars($rad["fornavn"], ENT_QUOTES, "UTF-8");
-            $etternavn = htmlspecialchars($rad["etternavn"], ENT_QUOTES, "UTF-8");
+            $brukernavn = htmlspecialchars(
+                $rad["brukernavn"],
+                ENT_QUOTES,
+                "UTF-8"
+            );
+
+            $fornavn = htmlspecialchars(
+                $rad["fornavn"],
+                ENT_QUOTES,
+                "UTF-8"
+            );
+
+            $etternavn = htmlspecialchars(
+                $rad["etternavn"],
+                ENT_QUOTES,
+                "UTF-8"
+            );
 
             print("<option value='$brukernavn'>
                 $brukernavn - $fornavn $etternavn
@@ -68,12 +92,18 @@ if (isset($_POST["slettStudentKnapp"])) {
 
     </select>
 
-    <br>
+    <br><br>
 
-    <input type="submit"
-           name="slettStudentKnapp"
-           value="Slett student">
+    <input
+        type="submit"
+        name="slettStudentKnapp"
+        id="slettStudentKnapp"
+        value="Slett student"
+    >
 
 </form>
 
 <p><a href="index.php">Tilbake til hovedsiden</a></p>
+
+</body>
+</html>
